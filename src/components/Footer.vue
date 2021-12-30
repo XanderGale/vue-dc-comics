@@ -103,6 +103,43 @@
                 </div>
             </div>
         </div>
+        <div class="end-footer">
+            <div class="container">
+                <div class="col left">
+                    <button>SIGN UP NOW!</button>
+                </div>
+                <div class="col right">
+                    <h4>Follow us</h4>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-facebook.png" alt="facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-twitter.png" alt="twitter">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-youtube.png" alt="youtube">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-pinterest.png" alt="pinterest">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/footer-periscope.png" alt="periscope">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </template>
 
@@ -161,14 +198,53 @@ export default {
                         }
                     }
                 }
-                col.right{
+                .col.right{
                     #footer-logo-bg{
-                        float: right;
-                        top: 0;
-                        right: 0;
                         overflow: hidden;
-                        height: 110%;
+                        margin: -70px 0px;
                     }
+                }
+            }
+        }
+        .end-footer{
+            background-color: $brand-second-color;
+            padding: 30px 0;
+            .container{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                .col{
+                    button{
+                        background-color: $brand-second-color;
+                        color: white;
+                        padding: 10px 15px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 12px;
+                        border: 1px solid $brand-main-color;
+                        cursor: pointer;
+                    }
+                    h4{
+                        color: $brand-main-color;
+                        text-transform: uppercase;
+                        margin: 0px 15px;
+                    }
+                    ul{
+                        list-style-type: none;
+                        li{
+                            display: inline-block;
+                            margin: 0px 5px;
+                        }
+                    }
+                }
+                .col.right{
+                    margin-left: auto;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: center;
                 }
             }
         }
