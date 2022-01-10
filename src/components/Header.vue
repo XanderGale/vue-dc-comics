@@ -6,7 +6,7 @@
                 <img src="../assets/img/dc-logo.png" alt="DC Logo">
 
                 <ul>
-                    <li v-for="(link, index) in links" :key="index">
+                    <li v-for="(link, index) in links" :key="index" @click=" activeIndex = index" :class="{ 'active' : index === activeIndex }">
                         <a :href="link.url">{{ link.text }}</a>
                     </li>
                 </ul>
@@ -20,6 +20,7 @@ export default {
   name: 'Header',
   data: function() {
       return {
+          activeIndex: 0,
           links: [
               {
                 text: 'Characters',
@@ -95,7 +96,8 @@ export default {
                     line-height: 100px;
                     border-bottom: 3px solid transparent;
                     cursor: pointer;
-                    &:hover{
+                    &:hover,
+                    &.active{
                         border-bottom: 3px solid $brand-main-color;
                         color: $brand-main-color;
                     }
