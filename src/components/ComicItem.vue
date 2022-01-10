@@ -31,7 +31,7 @@ export default {
             font-weight: 100;
             text-transform: uppercase;
 
-            margin-top: 15px;
+            margin: 15px 0;
         }
     }
 </style>
